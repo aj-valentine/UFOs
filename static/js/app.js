@@ -8,14 +8,48 @@ var tbody = d3.select("tbody");
 
 // Function that builds table to display all UFO sightings
 function buildTable(data) {
-    tbody.html(""); // this clears the table when first run the function
-    data.forEach((dataRow) => { // forEach loop to loop through all the data rows
-        let row = tbody.append("tr"); // create variable "row" that will add each row to the table body - used let instead of var b/c row just for this line of code
-    
-        Object.values(dataRow).forEach((val) => { // adding another function inside to tell code to put each sighting into its own row of data
-            let cell = row.append("td"); // append each value of the object to a cell in the table
-            cell.text(val); // extract the text of the value
-            }
-        );
+    // First, clear out any existing data
+    tbody.html("");
+  
+    // Next, loop through each object in the data
+    // and append a row and cells for each value in the row
+    data.forEach((dataRow) => {
+      // Append a row to the table body
+      let row = tbody.append("tr");
+  
+      // Loop through each field in the dataRow and add
+      // each value as a table cell (td)
+      Object.values(dataRow).forEach((val) => {
+        let cell = row.append("td");
+        cell.text(val);
+        }
+      );
     });
-}
+  }
+
+// Another function that adds a date filter to the data table
+function handleClick() {
+    // Grab the datetime value from the filter
+    let date = d3.select("#datetime").property("value");
+    let filteredData = tableData;
+  
+     // Check to see if a date was entered and filter the
+    // data using that date.
+    if (date) {
+      // Apply `filter` to the table data to only keep the
+      // rows where the `datetime` value matches the filter value
+      filteredData = filteredData.filter(row => row.datetime === date);
+    }
+  
+     // Rebuild the table using the filtered data
+    // @NOTE: If no date was entered, then filteredData will
+    // just be the original tableData.
+    buildTable(filteredData);
+  }
+  
+  // Attach an event to listen for the form button
+  d3.selectAll("#filter-btn").on("click", handleClick);
+  
+  // Build the table when the page loads
+  buildTable(tableData);
+

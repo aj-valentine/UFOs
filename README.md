@@ -18,9 +18,13 @@ In order to use the filtered table, I have included step by step instructions be
 - Type in desired filter information. For example, in the image below, I have filtered: 
 
 date: 1/1/2010
+
 city: fresno
+
 state: ca
+
 country: us
+
 shape: light
 
 <img width="939" alt="filtered resultsPNG" src="https://user-images.githubusercontent.com/67871338/95001106-e9c17300-0594-11eb-9b8f-f34a6e7d8b21.PNG">

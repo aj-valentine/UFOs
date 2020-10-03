@@ -16,6 +16,7 @@ In order to use the filtered table, I have included step by step instructions be
 
 ### 2. How to filter for information: 
 - Type in desired filter information. For example, in the image below, I have filtered: 
+
 date: 1/1/2010
 city: fresno
 state: ca

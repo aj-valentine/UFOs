@@ -9,18 +9,20 @@ This project was created for Dana, a data journalist, who had to write an articl
 
 In order to use the filtered table, I have included step by step instructions below with screenshots so Dana can explain to her readers how to view the information. 
 
-1. Overview of the HTML file page: 
+### 1. Overview of the HTML file page: 
 - Contains various filter boxes on the left side, and the data table on the right. 
--- insert overview 
 
-2. How to filter for information: 
+<img width="1109" alt="page overview" src="https://user-images.githubusercontent.com/67871338/95001107-eb8b3680-0594-11eb-9851-548873a6571c.PNG">
+
+### 2. How to filter for information: 
 - Type in desired filter information. For example, in the image below, I have filtered: 
 date: 1/1/2010
 city: fresno
 state: ca
 country: us
 shape: light
--- insert filtered image
+
+<img width="939" alt="filtered resultsPNG" src="https://user-images.githubusercontent.com/67871338/95001106-e9c17300-0594-11eb-9b8f-f34a6e7d8b21.PNG">
 
 ## Summary
 
